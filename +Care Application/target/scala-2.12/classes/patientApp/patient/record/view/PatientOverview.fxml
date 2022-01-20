@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="patientApp.patient.record.view.PatientOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="193.0" layoutY="105.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane>
+               <children>
+                  <Label layoutX="5.0" text="Search:" textFill="#2b91bf" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="patientTable" layoutX="-26.0" layoutY="42.0" prefHeight="856.0" prefWidth="174.0" style="-fx-background-color: #2b91bf; -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                      <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
+                      <TableColumn fx:id="lastNameColumn" prefWidth="75.0" style="background-colour: black;" text="Last Name" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TextField fx:id="searchField" layoutY="38.0" style="-fx-background-color: #2b91bf;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="112.0" text="Patient Details" textFill="#2b91bf" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <GridPane layoutX="99.0" layoutY="145.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="First Name" />
+                        <Label text="Last Name" GridPane.rowIndex="1" />
+                        <Label text="Address" GridPane.rowIndex="2" />
+                        <Label text="Age" GridPane.rowIndex="3" />
+                        <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="addressLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="ageLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="phoneNumLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="emailLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="Phone Number" GridPane.rowIndex="5" />
+                        <Label text="Email" GridPane.rowIndex="6" />
+                        <Label text="Gender" GridPane.rowIndex="4" />
+                        <Label fx:id="genderLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="5.0" layoutY="266.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Blood group" />
+                        <Label text="Medical Conditions" GridPane.rowIndex="1" />
+                        <Label text="Under medications" GridPane.rowIndex="2" />
+                        <Label fx:id="bloodGroupLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="medicalConditionLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="underMedLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Label layoutY="363.0" text="Appointment Date" textFill="#2b91bf" AnchorPane.leftAnchor="5.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="5.0" layoutY="389.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Current appointment" />
+                        <Label text="Next appointment" GridPane.rowIndex="1" />
+                        <Label fx:id="currentAptLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="nextAptLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="5.0" layoutY="452.0" text="Payment" textFill="#2b91bf" AnchorPane.leftAnchor="5.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutY="478.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Consultation fee amount" />
+                        <Label text="Payment made" GridPane.rowIndex="1" />
+                        <Label fx:id="feeLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="paidAmtLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Balance" GridPane.rowIndex="2" />
+                        <Label fx:id="balanceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Label layoutY="568.0" text="Consultation Overview" textFill="#2b91bf" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="consultationOverTextarea" layoutY="602.0" text="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" />
+                  <HBox alignment="TOP_RIGHT" layoutX="5.0" layoutY="867.0" spacing="10.0" AnchorPane.rightAnchor="5.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNewPatient" style="-fx-background-color: #2b91bf;" text="New" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#handleEditPatient" style="-fx-background-color: #2b91bf;" text="Edit" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#handleDeletePatient" style="-fx-background-color: #2b91bf;" text="Remove" textFill="WHITE" textOverrun="WORD_ELLIPSIS" />
+                     </children>
+                  </HBox>
+                  <Label layoutX="5.0" layoutY="240.0" text="Medical Description" textFill="#2b91bf" AnchorPane.leftAnchor="5.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
